@@ -90,7 +90,7 @@ public class AppView extends View {
     west.setBodyBorder(false);
     west.setLayout(new AccordionLayout());
     west.setLayoutOnChange(true);
-    west.setHeading("GXT Mail Demo");
+    west.setHeadingHtml("GXT Mail Demo");
 
     viewport.add(west, data);
   }

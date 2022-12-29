@@ -86,7 +86,7 @@ public class JsonGridExample extends LayoutContainer {
     panel.setAnimCollapse(false);
     panel.setButtonAlign(HorizontalAlignment.CENTER);
     panel.setIcon(Resources.ICONS.table());
-    panel.setHeading("JSON Table Demo");
+    panel.setHeadingHtml("JSON Table Demo");
     panel.setLayout(new FitLayout());
     panel.add(grid);
     panel.setSize(575, 350);

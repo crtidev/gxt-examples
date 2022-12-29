@@ -189,13 +189,13 @@ public class AdvancedChartExample extends LayoutContainer {
     RowData data;
     data = new RowData(1, 300, new Margins(10));
     ContentPanel cp = new ContentPanel(new FitLayout());
-    cp.setHeading("Chart");
+    cp.setHeadingHtml("Chart");
     cp.add(chart);
     lc.add(cp, data);
 
     data = new RowData(1, 1, new Margins(10));
     cp = new ContentPanel(new FitLayout());
-    cp.setHeading("Teams Sales");
+    cp.setHeadingHtml("Teams Sales");
     cp.add(teamSalesGrid);
     lc.add(cp, data);
 

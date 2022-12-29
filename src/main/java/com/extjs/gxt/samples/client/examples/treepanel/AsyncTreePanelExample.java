@@ -114,7 +114,7 @@ public class AsyncTreePanelExample extends LayoutContainer {
     });
 
     ContentPanel cp = new ContentPanel();
-    cp.setHeading("Async TreePanel");
+    cp.setHeadingHtml("Async TreePanel");
     cp.setLayout(new FitLayout());
     cp.add(tree);
     cp.setSize(315, 400);

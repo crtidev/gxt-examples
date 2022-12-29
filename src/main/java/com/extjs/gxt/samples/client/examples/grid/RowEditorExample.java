@@ -52,7 +52,7 @@ public class RowEditorExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Common Name");
+    column.setHeaderHtml("Common Name");
     column.setWidth(220);
 
     TextField<String> text = new TextField<String>();
@@ -89,14 +89,14 @@ public class RowEditorExample extends LayoutContainer {
 
     column = new ColumnConfig();
     column.setId("light");
-    column.setHeader("Light");
+    column.setHeaderHtml("Light");
     column.setWidth(130);
     column.setEditor(editor);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("price");
-    column.setHeader("Price");
+    column.setHeaderHtml("Price");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(70);
     column.setNumberFormat(NumberFormat.getCurrencyFormat());
@@ -109,7 +109,7 @@ public class RowEditorExample extends LayoutContainer {
 
     column = new ColumnConfig();
     column.setId("available");
-    column.setHeader("Available");
+    column.setHeaderHtml("Available");
     column.setWidth(95);
     column.setEditor(new CellEditor(dateField));
     column.setDateTimeFormat(DateTimeFormat.getMediumDateFormat());
@@ -127,7 +127,7 @@ public class RowEditorExample extends LayoutContainer {
 
     ContentPanel cp = new ContentPanel();
     cp.setIcon(Resources.ICONS.table());
-    cp.setHeading("Edit Plants with RowEditor");
+    cp.setHeadingHtml("Edit Plants with RowEditor");
     cp.setFrame(true);
     cp.setSize(600, 300);
     cp.setLayout(new FitLayout());

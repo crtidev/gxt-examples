@@ -57,7 +57,7 @@ public class TreeGridToTreeGridExample extends LayoutContainer {
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(false);
     cp.setFrame(true);
-    cp.setHeading("TreeGrid to TreeGrid Example");
+    cp.setHeadingHtml("TreeGrid to TreeGrid Example");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
 
     VBoxLayout layout = new VBoxLayout();

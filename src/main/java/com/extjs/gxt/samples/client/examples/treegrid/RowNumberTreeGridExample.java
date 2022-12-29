@@ -51,7 +51,7 @@ public class RowNumberTreeGridExample extends LayoutContainer {
 
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(false);
-    cp.setHeading("RowNumber TreeGrid");
+    cp.setHeadingHtml("RowNumber TreeGrid");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.setFrame(true);

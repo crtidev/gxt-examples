@@ -30,7 +30,7 @@ public class ListViewDNDExample extends LayoutContainer {
     super.onRender(parent, index);
     setStyleAttribute("margin", "10px");
     ContentPanel cp = new ContentPanel();
-    cp.setHeading("ListView Append Sorted");
+    cp.setHeadingHtml("ListView Append Sorted");
     cp.setSize(500, 225);
     cp.setFrame(true);
     cp.setLayout(new RowLayout(Orientation.HORIZONTAL));
@@ -63,7 +63,7 @@ public class ListViewDNDExample extends LayoutContainer {
     add(cp);
     
     cp = new ContentPanel();
-    cp.setHeading("ListView Insert");
+    cp.setHeadingHtml("ListView Insert");
     cp.setStyleAttribute("marginTop", "10px");
     cp.setSize(500, 225);
     cp.setFrame(true);

@@ -178,7 +178,7 @@ public class CheckGroupingGridExample extends LayoutContainer {
     view.setForceFit(true);
     view.setGroupRenderer(new GridGroupRenderer() {
       public String render(GroupColumnData data) {
-        String f = cm.getColumnById(data.field).getHeader();
+        String f = cm.getColumnById(data.field).getHeaderHtml();
         String l = data.models.size() == 1 ? "Item" : "Items";
         return "<div class='x-grid3-group-checker'><div class='" + uncheckedStyle + "'>&nbsp;</div></div>&nbsp;" + f
             + ": " + data.group + " (" + data.models.size() + " " + l + ")";
@@ -192,7 +192,7 @@ public class CheckGroupingGridExample extends LayoutContainer {
     grid.setSelectionModel(sm);
 
     ContentPanel panel = new ContentPanel();
-    panel.setHeading("Grouping Example");
+    panel.setHeadingHtml("Grouping Example");
     panel.setIcon(Resources.ICONS.table());
     panel.setCollapsible(true);
     panel.setFrame(true);

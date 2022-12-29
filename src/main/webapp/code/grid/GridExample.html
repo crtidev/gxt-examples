@@ -110,20 +110,20 @@ public class GridExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     column.setRowHeader(true);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(75);
     column.setRenderer(gridNumber);
@@ -147,7 +147,7 @@ public class GridExample extends LayoutContainer {
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(true);
     cp.setIcon(Resources.ICONS.table());
-    cp.setHeading("Basic Grid");
+    cp.setHeadingHtml("Basic Grid");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.getHeader().setIconAltText("Grid Icon");

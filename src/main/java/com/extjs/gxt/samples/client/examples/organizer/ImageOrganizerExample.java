@@ -70,7 +70,7 @@ public class ImageOrganizerExample extends LayoutContainer {
     container.setLayout(new BorderLayout());
 
     ContentPanel west = new ContentPanel();
-    west.setHeading("My Albums");
+    west.setHeadingHtml("My Albums");
 
     ToolBar toolBar = new ToolBar();
     Button newAlbum = new Button("New Album");
@@ -110,7 +110,7 @@ public class ImageOrganizerExample extends LayoutContainer {
     container.add(west, westData);
 
     ContentPanel center = new ContentPanel();
-    center.setHeading("My Images");
+    center.setHeadingHtml("My Images");
 //    center.setScrollMode(Scroll.AUTO);
     center.setLayout(new FitLayout());
 

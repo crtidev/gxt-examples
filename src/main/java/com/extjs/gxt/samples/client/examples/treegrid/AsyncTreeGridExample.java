@@ -96,7 +96,7 @@ public class AsyncTreeGridExample extends LayoutContainer {
 
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(false);
-    cp.setHeading("Async TreeGrid");
+    cp.setHeadingHtml("Async TreeGrid");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.setFrame(true);

@@ -27,8 +27,8 @@ import com.extjs.gxt.ui.client.widget.ContentPanel;
 import com.extjs.gxt.ui.client.widget.LayoutContainer;
 import com.extjs.gxt.ui.client.widget.VerticalPanel;
 import com.extjs.gxt.ui.client.widget.button.Button;
-import com.extjs.gxt.ui.client.widget.form.SimpleComboBox;
 import com.extjs.gxt.ui.client.widget.form.ComboBox.TriggerAction;
+import com.extjs.gxt.ui.client.widget.form.SimpleComboBox;
 import com.extjs.gxt.ui.client.widget.grid.CheckBoxSelectionModel;
 import com.extjs.gxt.ui.client.widget.grid.ColumnConfig;
 import com.extjs.gxt.ui.client.widget.grid.ColumnData;
@@ -38,7 +38,6 @@ import com.extjs.gxt.ui.client.widget.grid.GridCellRenderer;
 import com.extjs.gxt.ui.client.widget.grid.RowExpander;
 import com.extjs.gxt.ui.client.widget.grid.RowNumberer;
 import com.extjs.gxt.ui.client.widget.layout.FitLayout;
-import com.extjs.gxt.ui.client.widget.table.NumberCellRenderer;
 import com.extjs.gxt.ui.client.widget.toolbar.LabelToolItem;
 import com.extjs.gxt.ui.client.widget.toolbar.SeparatorToolItem;
 import com.extjs.gxt.ui.client.widget.toolbar.ToolBar;
@@ -49,13 +48,10 @@ import com.google.gwt.user.client.Element;
 public class GridPluginsExample extends LayoutContainer {
 
   private VerticalPanel panel;
-  private GridCellRenderer<Stock> gridNumber;
   private GridCellRenderer<Stock> change;
 
   public GridPluginsExample() {
-    final NumberFormat currency = NumberFormat.getCurrencyFormat();
     final NumberFormat number = NumberFormat.getFormat("0.00");
-    final NumberCellRenderer<Grid<Stock>> numberRenderer = new NumberCellRenderer<Grid<Stock>>(currency);
 
     change = new GridCellRenderer<Stock>() {
       public String render(Stock model, String property, ColumnData config, int rowIndex, int colIndex,
@@ -63,13 +59,6 @@ public class GridPluginsExample extends LayoutContainer {
         double val = (Double) model.get(property);
         String style = val < 0 ? "red" : "green";
         return "<span style='color:" + style + "'>" + number.format(val) + "</span>";
-      }
-    };
-
-    gridNumber = new GridCellRenderer<Stock>() {
-      public String render(Stock model, String property, ColumnData config, int rowIndex, int colIndex,
-          ListStore<Stock> store, Grid<Stock> grid) {
-        return numberRenderer.render(null, property, model.get(property));
       }
     };
 
@@ -102,22 +91,21 @@ public class GridPluginsExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(300);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(75);
-    column.setRenderer(gridNumber);
     configs.add(column);
 
     column = new ColumnConfig("change", "Change", 100);
@@ -131,7 +119,7 @@ public class GridPluginsExample extends LayoutContainer {
     ColumnModel cm = new ColumnModel(configs);
 
     ContentPanel cp = new ContentPanel();
-    cp.setHeading("Framed with Checkbox Selection and Horizontal Scrolling");
+    cp.setHeadingHtml("Framed with Checkbox Selection and Horizontal Scrolling");
     cp.setFrame(true);
     cp.setIcon(Resources.ICONS.table());
     cp.setLayout(new FitLayout());
@@ -190,22 +178,21 @@ public class GridPluginsExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(75);
-    column.setRenderer(gridNumber);
     configs.add(column);
 
     column = new ColumnConfig("change", "Change", 100);
@@ -224,7 +211,7 @@ public class GridPluginsExample extends LayoutContainer {
     ColumnModel cm = new ColumnModel(configs);
 
     ContentPanel cp = new ContentPanel();
-    cp.setHeading("Expander Rows, Collapse and Auto Fill");
+    cp.setHeadingHtml("Expander Rows, Collapse and Auto Fill");
     cp.setIcon(Resources.ICONS.table());
     cp.setAnimCollapse(false);
     cp.setCollapsible(true);
@@ -252,22 +239,21 @@ public class GridPluginsExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(75);
-    column.setRenderer(gridNumber);
     configs.add(column);
 
     column = new ColumnConfig("change", "Change", 100);
@@ -286,7 +272,7 @@ public class GridPluginsExample extends LayoutContainer {
     ColumnModel cm = new ColumnModel(configs);
 
     ContentPanel cp = new ContentPanel();
-    cp.setHeading("Support for standard Panel features such as framing, buttons and toolbars");
+    cp.setHeadingHtml("Support for standard Panel features such as framing, buttons and toolbars");
     cp.setFrame(true);
     cp.setIcon(Resources.ICONS.table());
     cp.addButton(new Button("Save"));
@@ -325,22 +311,21 @@ public class GridPluginsExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(75);
-    column.setRenderer(gridNumber);
     configs.add(column);
 
     column = new ColumnConfig("change", "Change", 100);
@@ -371,7 +356,7 @@ public class GridPluginsExample extends LayoutContainer {
     btn.setIcon(Resources.ICONS.delete());
 
     ContentPanel cp = new ContentPanel();
-    cp.setHeading("Grid with Numbered Rows and Force Fit");
+    cp.setHeadingHtml("Grid with Numbered Rows and Force Fit");
     cp.setIcon(Resources.ICONS.table());
     cp.setLayout(new FitLayout());
     cp.setSize(600, 300);

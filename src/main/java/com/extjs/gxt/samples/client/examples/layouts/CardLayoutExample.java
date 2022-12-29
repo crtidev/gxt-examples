@@ -26,7 +26,7 @@ public class CardLayoutExample extends LayoutContainer {
     ContentPanel panel = new ContentPanel();
     panel.setSize(400, 100);
     panel.setFrame(true);
-    panel.setHeading("CardLayout Example");
+    panel.setHeadingHtml("CardLayout Example");
     panel.setButtonAlign(HorizontalAlignment.CENTER);
 
     final CardLayout layout = new CardLayout();

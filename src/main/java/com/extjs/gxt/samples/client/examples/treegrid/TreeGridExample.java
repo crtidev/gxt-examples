@@ -54,7 +54,7 @@ public class TreeGridExample extends LayoutContainer {
 
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(false);
-    cp.setHeading("TreeGrid");
+    cp.setHeadingHtml("TreeGrid");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.setFrame(true);

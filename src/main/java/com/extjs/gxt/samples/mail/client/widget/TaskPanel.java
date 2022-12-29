@@ -12,7 +12,7 @@ import com.extjs.gxt.ui.client.widget.ContentPanel;
 public class TaskPanel extends ContentPanel {
 
   public TaskPanel() {
-    setHeading("Tasks");
+    setHeadingHtml("Tasks");
   }
 
 }

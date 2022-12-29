@@ -31,7 +31,7 @@ public class DraggableExample extends LayoutContainer {
     cp.setCollapsible(true);
     cp.setIcon(Resources.ICONS.text());
     cp.setBodyStyleName("pad-text");
-    cp.setHeading("Proxy Drag");
+    cp.setHeadingHtml("Proxy Drag");
     cp.addText(TestData.DUMMY_TEXT_SHORT);
     cp.setWidth(200);
 
@@ -42,7 +42,7 @@ public class DraggableExample extends LayoutContainer {
     cp = new ContentPanel();
     cp.setCollapsible(true);
     cp.setBodyStyleName("pad-text");
-    cp.setHeading("Direct Drag");
+    cp.setHeadingHtml("Direct Drag");
     cp.setIcon(Resources.ICONS.text());
     cp.addText("Drags can only be started from the header.");
     cp.setWidth(200);
@@ -54,7 +54,7 @@ public class DraggableExample extends LayoutContainer {
 
     cp = new ContentPanel();
     cp.setBodyStyleName("pad-text");
-    cp.setHeading("Constrain");
+    cp.setHeadingHtml("Constrain");
     cp.setIcon(Resources.ICONS.text());
     cp.addText("Can only be dragged vertically.");
     cp.setWidth(200);

@@ -12,7 +12,7 @@ import com.extjs.gxt.ui.client.widget.ContentPanel;
 public class ContactPanel extends ContentPanel {
 
   public ContactPanel() {
-    setHeading("Contacts");
+	  setHeadingHtml("Contacts");
   }
 
 }

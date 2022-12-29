@@ -50,7 +50,7 @@ public class PagingBeanModelGridExample extends LayoutContainer {
       MessageBox box = new MessageBox();
       box.setButtons(MessageBox.OK);
       box.setIcon(MessageBox.INFO);
-      box.setTitle("Information");
+      box.setTitleHtml("Information");
       box.setMessage("No service detected");
       box.show();
       return;
@@ -103,7 +103,7 @@ public class PagingBeanModelGridExample extends LayoutContainer {
     panel.setAnimCollapse(false);
     panel.setButtonAlign(HorizontalAlignment.CENTER);
     panel.setIcon(Resources.ICONS.table());
-    panel.setHeading("Paging Grid");
+    panel.setHeadingHtml("Paging Grid");
     panel.setLayout(new FitLayout());
     panel.add(grid);
     panel.setSize(600, 350);

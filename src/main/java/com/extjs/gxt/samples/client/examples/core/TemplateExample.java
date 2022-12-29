@@ -68,7 +68,7 @@ public class TemplateExample extends LayoutContainer {
     vp.setSpacing(10);
 
     final ContentPanel panel = new ContentPanel();
-    panel.setHeading("Basic Template");
+    panel.setHeadingHtml("Basic Template");
     panel.setWidth(300);
     panel.setBodyStyleName("pad-text");
 
@@ -85,7 +85,7 @@ public class TemplateExample extends LayoutContainer {
     panel.setTopComponent(toolbar);
 
     final ContentPanel xpanel = new ContentPanel();
-    xpanel.setHeading("XTemplate Playground");
+    xpanel.setHeadingHtml("XTemplate Playground");
     xpanel.setWidth(300);
     xpanel.setBodyStyleName("pad-text");
 
@@ -102,7 +102,7 @@ public class TemplateExample extends LayoutContainer {
     xpanel.setTopComponent(toolBar);
     
     final ContentPanel cpanel = new ContentPanel();
-    cpanel.setHeading("XTemplate Test");
+    cpanel.setHeadingHtml("XTemplate Test");
     cpanel.setWidth(500);
     cpanel.setBodyStyleName("pad-text");
     

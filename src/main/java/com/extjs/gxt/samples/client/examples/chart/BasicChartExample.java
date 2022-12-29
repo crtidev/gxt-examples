@@ -37,7 +37,7 @@ public class BasicChartExample extends LayoutContainer {
   protected void onRender(Element parent, int index) {
     super.onRender(parent, index);
     ContentPanel cp = new ContentPanel();
-    cp.setHeading("Pie chart");
+    cp.setHeadingHtml("Pie chart");
     cp.setFrame(true);
     cp.setSize(400, 400);
     cp.setLayout(new FitLayout());

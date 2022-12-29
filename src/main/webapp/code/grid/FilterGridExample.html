@@ -112,19 +112,19 @@ public class FilterGridExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(100);
     column.setRenderer(gridNumber);
@@ -161,7 +161,7 @@ public class FilterGridExample extends LayoutContainer {
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(true);
     cp.setIcon(Resources.ICONS.table());
-    cp.setHeading("Filter Grid");
+    cp.setHeadingHtml("Filter Grid");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.setSize(660, 300);

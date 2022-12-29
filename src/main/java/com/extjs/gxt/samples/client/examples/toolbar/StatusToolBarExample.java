@@ -62,7 +62,7 @@ public class StatusToolBarExample extends LayoutContainer {
     toolBar.add(wordCount);
 
     FormPanel form = new FormPanel();
-    form.setHeading("Status Toolbar");
+    form.setHeadingHtml("Status Toolbar");
     form.setSize(450, 300);
     form.setPadding(5);
     

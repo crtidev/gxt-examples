@@ -94,7 +94,7 @@ public class MenuBarExample extends LayoutContainer {
     bar.add(item4);
 
     ContentPanel panel = new ContentPanel();
-    panel.setHeading("MenuBar Example");
+    panel.setHeadingHtml("MenuBar Example");
     panel.setTopComponent(bar);
     panel.setSize(400, 300);
 

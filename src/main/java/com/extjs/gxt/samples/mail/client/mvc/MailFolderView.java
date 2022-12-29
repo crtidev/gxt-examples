@@ -50,7 +50,7 @@ public class MailFolderView extends View {
     ContentPanel west = (ContentPanel) Registry.get(AppView.WEST_PANEL);
     ContentPanel mail = new ContentPanel();
     mail.setAnimCollapse(false);
-    mail.setHeading("Mail");
+    mail.setHeadingHtml("Mail");
     mail.addListener(Events.Expand, new Listener<ComponentEvent>() {
       public void handleEvent(ComponentEvent be) {
         Dispatcher.get().dispatch(AppEvents.NavMail);

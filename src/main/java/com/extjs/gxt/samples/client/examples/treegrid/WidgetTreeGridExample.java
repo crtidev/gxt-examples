@@ -59,7 +59,7 @@ public class WidgetTreeGridExample extends LayoutContainer {
 
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(false);
-    cp.setHeading("Widget Renderer TreeGrid");
+    cp.setHeadingHtml("Widget Renderer TreeGrid");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.setFrame(true);

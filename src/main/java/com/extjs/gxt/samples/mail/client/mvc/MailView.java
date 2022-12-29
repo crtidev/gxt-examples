@@ -47,7 +47,7 @@ public class MailView extends View {
 
     if (event.getType() == AppEvents.ViewMailItems) {
       Folder f = (Folder) event.getData("folder");
-      mailListPanel.setHeading(f.getName());
+      mailListPanel.setHeadingHtml(f.getName());
       
       ListStore<MailItem> store = mailListPanel.getStore();
       store.removeAll();

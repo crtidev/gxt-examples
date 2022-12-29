@@ -60,7 +60,7 @@ public class ReorderingTreeGridExample extends LayoutContainer {
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(false);
     cp.setFrame(true);
-    cp.setHeading("Reordering TreeGrid Example");
+    cp.setHeadingHtml("Reordering TreeGrid Example");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
 
     cp.setLayout(new FitLayout());

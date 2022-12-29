@@ -55,7 +55,7 @@ public class AdvancedToolBarExample extends LayoutContainer {
 
   private ContentPanel createStandard() {
     ContentPanel panel = new SamplePanel();
-    panel.setHeading("Standard");
+    panel.setHeadingHtml("Standard");
 
     ToolBar toolBar = new ToolBar();
 
@@ -92,13 +92,13 @@ public class AdvancedToolBarExample extends LayoutContainer {
 
   private ContentPanel createMulti() {
     ContentPanel panel = new SamplePanel();
-    panel.setHeading("Multi Columns");
+    panel.setHeadingHtml("Multi Columns");
 
     ToolBar toolBar = new ToolBar();
     panel.setTopComponent(toolBar);
 
     ButtonGroup group = new ButtonGroup(2);
-    group.setHeading("Clipboard");
+    group.setHeadingHtml("Clipboard");
 
     Button btn = new Button("Cool", IconHelper.createStyle("add16"));
     group.add(btn);
@@ -118,7 +118,7 @@ public class AdvancedToolBarExample extends LayoutContainer {
     toolBar.add(group);
 
     group = new ButtonGroup(2);
-    group.setHeading("Other Bugus Actions");
+    group.setHeadingHtml("Other Bugus Actions");
 
     btn = new Button("Cool", IconHelper.createStyle("add16"));
     group.add(btn);
@@ -142,7 +142,7 @@ public class AdvancedToolBarExample extends LayoutContainer {
 
   private ContentPanel createMulti2() {
     ContentPanel panel = new SamplePanel();
-    panel.setHeading("Multi Columns No Titles");
+    panel.setHeadingHtml("Multi Columns No Titles");
 
     ToolBar toolBar = new ToolBar();
     panel.setTopComponent(toolBar);
@@ -190,13 +190,13 @@ public class AdvancedToolBarExample extends LayoutContainer {
 
   private ContentPanel createMixed() {
     ContentPanel panel = new SamplePanel();
-    panel.setHeading("Mix and match icon sizes");
+    panel.setHeadingHtml("Mix and match icon sizes");
 
     ToolBar toolBar = new ToolBar();
     panel.setTopComponent(toolBar);
 
     ButtonGroup group = new ButtonGroup(3);
-    group.setHeading("Clipboard");
+    group.setHeadingHtml("Clipboard");
     toolBar.add(group);
 
     Button btn = new Button("Paste", Resources.ICONS.add32());
@@ -231,7 +231,7 @@ public class AdvancedToolBarExample extends LayoutContainer {
     group.add(btn);
 
     group = new ButtonGroup(3);
-    group.setHeading("Clipboard");
+    group.setHeadingHtml("Clipboard");
     toolBar.add(group);
 
     btn = new Button("Paste", Resources.ICONS.add32());

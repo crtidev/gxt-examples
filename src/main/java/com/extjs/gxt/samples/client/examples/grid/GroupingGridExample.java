@@ -59,7 +59,7 @@ public class GroupingGridExample extends LayoutContainer {
     view.setForceFit(true);
     view.setGroupRenderer(new GridGroupRenderer() {
       public String render(GroupColumnData data) {
-        String f = cm.getColumnById(data.field).getHeader();
+        String f = cm.getColumnById(data.field).getHeaderHtml();
         String l = data.models.size() == 1 ? "Item" : "Items";
         return f + ": " + data.group + " (" + data.models.size() + " " + l + ")";
       }
@@ -70,7 +70,7 @@ public class GroupingGridExample extends LayoutContainer {
     grid.setBorders(true);
 
     ContentPanel panel = new ContentPanel();
-    panel.setHeading("Grouping Example");
+    panel.setHeadingHtml("Grouping Example");
     panel.setIcon(Resources.ICONS.table());
     panel.setCollapsible(true);
     panel.setFrame(true);

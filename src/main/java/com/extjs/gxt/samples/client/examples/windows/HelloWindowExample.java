@@ -33,7 +33,7 @@ public class HelloWindowExample extends LayoutContainer {
     window.setPlain(true);
     window.setModal(true);
     window.setBlinkModal(true);
-    window.setHeading("Hello Window");
+    window.setHeadingHtml("Hello Window");
     window.setLayout(new FitLayout());
     window.addWindowListener(new WindowListener() {
       @Override

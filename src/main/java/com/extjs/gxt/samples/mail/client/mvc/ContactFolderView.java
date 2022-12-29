@@ -33,7 +33,7 @@ public class ContactFolderView extends View {
 
   protected void initUI() {
     contacts = new ContentPanel();
-    contacts.setHeading("Contacts");
+    contacts.setHeadingHtml("Contacts");
     contacts.setAnimCollapse(false);
     contacts.addListener(Events.Expand, new Listener<ComponentEvent>() {
       public void handleEvent(ComponentEvent be) {

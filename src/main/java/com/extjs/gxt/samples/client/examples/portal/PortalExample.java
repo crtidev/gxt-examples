@@ -24,16 +24,12 @@ import com.extjs.gxt.ui.client.widget.button.ToolButton;
 import com.extjs.gxt.ui.client.widget.custom.Portal;
 import com.extjs.gxt.ui.client.widget.custom.Portlet;
 import com.extjs.gxt.ui.client.widget.grid.ColumnConfig;
-import com.extjs.gxt.ui.client.widget.grid.ColumnData;
 import com.extjs.gxt.ui.client.widget.grid.ColumnModel;
 import com.extjs.gxt.ui.client.widget.grid.Grid;
-import com.extjs.gxt.ui.client.widget.grid.GridCellRenderer;
 import com.extjs.gxt.ui.client.widget.layout.AccordionLayout;
 import com.extjs.gxt.ui.client.widget.layout.BorderLayout;
 import com.extjs.gxt.ui.client.widget.layout.BorderLayoutData;
 import com.extjs.gxt.ui.client.widget.layout.FitLayout;
-import com.extjs.gxt.ui.client.widget.table.NumberCellRenderer;
-import com.google.gwt.i18n.client.NumberFormat;
 import com.google.gwt.user.client.Element;
 
 public class PortalExample extends LayoutContainer {
@@ -48,18 +44,18 @@ public class PortalExample extends LayoutContainer {
 
     ContentPanel west = new ContentPanel();
     west.setBodyBorder(false);
-    west.setHeading("West");
+    west.setHeadingHtml("West");
     west.setLayout(new AccordionLayout());
 
     ContentPanel nav = new ContentPanel();
-    nav.setHeading("Navigation");
+    nav.setHeadingHtml("Navigation");
     nav.setBorders(false);
     nav.setBodyStyle("fontSize: 12px; padding: 6px");
     nav.addText(TestData.DUMMY_TEXT_SHORT);
     west.add(nav);
 
     ContentPanel settings = new ContentPanel();
-    settings.setHeading("Settings");
+    settings.setHeadingHtml("Settings");
     settings.setBorders(false);
     west.add(settings);
 
@@ -75,7 +71,7 @@ public class PortalExample extends LayoutContainer {
     portal.setColumnWidth(2, .33);
 
     Portlet portlet = new Portlet();
-    portlet.setHeading("Grid in a Portlet");
+    portlet.setHeadingHtml("Grid in a Portlet");
     configPanel(portlet);
     portlet.setLayout(new FitLayout());
     portlet.add(createGrid());
@@ -84,25 +80,25 @@ public class PortalExample extends LayoutContainer {
     portal.add(portlet, 0);
 
     portlet = new Portlet();
-    portlet.setHeading("Another Panel 1");
+    portlet.setHeadingHtml("Another Panel 1");
     configPanel(portlet);
     portlet.addText(getBogusText());
     portal.add(portlet, 0);
 
     portlet = new Portlet();
-    portlet.setHeading("Panel 2");
+    portlet.setHeadingHtml("Panel 2");
     configPanel(portlet);
     portlet.addText(getBogusText());
     portal.add(portlet, 1);
 
     portlet = new Portlet();
-    portlet.setHeading("Another Panel 2");
+    portlet.setHeadingHtml("Another Panel 2");
     configPanel(portlet);
     portlet.addText(getBogusText());
     portal.add(portlet, 1);
 
     portlet = new Portlet();
-    portlet.setHeading("Panel 3");
+    portlet.setHeadingHtml("Panel 3");
     configPanel(portlet);
     portlet.addText(getBogusText());
     portal.add(portlet, 2);
@@ -116,38 +112,27 @@ public class PortalExample extends LayoutContainer {
   }
 
   private Grid<Stock> createGrid() {
-    final NumberFormat currency = NumberFormat.getCurrencyFormat();
-    final NumberCellRenderer<Grid<Stock>> numberRenderer = new NumberCellRenderer<Grid<Stock>>(currency);
-
-    GridCellRenderer<Stock> gridNumber = new GridCellRenderer<Stock>() {
-      public String render(Stock model, String property, ColumnData config, int rowIndex,
-          int colIndex, ListStore<Stock> store, Grid<Stock> grid) {
-        return numberRenderer.render(null, property, model.get(property));
-      }
-    };
-
     List<Stock> stocks = TestData.getStocks();
 
     List<ColumnConfig> configs = new ArrayList<ColumnConfig>();
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(50);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(50);
-    column.setRenderer(gridNumber);
     configs.add(column);
 
     ListStore<Stock> store = new ListStore<Stock>();

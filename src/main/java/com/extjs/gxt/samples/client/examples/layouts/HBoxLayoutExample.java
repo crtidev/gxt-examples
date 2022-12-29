@@ -47,7 +47,7 @@ public class HBoxLayoutExample extends LayoutContainer {
     super.onRender(parent, index);
     setScrollMode(Scroll.AUTO);
     ContentPanel panel = new ContentPanel();
-    panel.setHeading("HorizontalBox Example");
+    panel.setHeadingHtml("HorizontalBox Example");
     panel.setSize(600, 500);
     panel.setLayout(new BorderLayout());
 

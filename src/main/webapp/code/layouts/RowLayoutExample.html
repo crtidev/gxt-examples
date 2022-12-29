@@ -58,7 +58,7 @@ public class RowLayoutExample extends LayoutContainer {
     super.onRender(parent, index);
     setScrollMode(Scroll.AUTOY);
     ContentPanel panel = new ContentPanel();
-    panel.setHeading("RowLayout: Orientation set to vertical");
+    panel.setHeadingHtml("RowLayout: Orientation set to vertical");
     panel.setLayout(new RowLayout(Orientation.VERTICAL));
     panel.setSize(400, 300);
     panel.setFrame(true);
@@ -86,7 +86,7 @@ public class RowLayoutExample extends LayoutContainer {
     add(panel, new FlowData(10));
 
     panel = new ContentPanel();
-    panel.setHeading("RowLayout: Orientation set to horizontal");
+    panel.setHeadingHtml("RowLayout: Orientation set to horizontal");
     panel.setLayout(new RowLayout(Orientation.HORIZONTAL));
     panel.setSize(400, 300);
     panel.setFrame(true);

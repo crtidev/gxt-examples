@@ -88,7 +88,7 @@ public class GridStoreBindingExample extends LayoutContainer {
 
     ContentPanel cp = new ContentPanel();
 
-    cp.setHeading("Form Bindings");
+    cp.setHeadingHtml("Form Bindings");
     cp.setFrame(true);
     cp.setSize(800, 400);
     cp.setLayout(new RowLayout(Orientation.HORIZONTAL));
@@ -189,19 +189,19 @@ public class GridStoreBindingExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(75);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(75);
     column.setRenderer(gridNumber);

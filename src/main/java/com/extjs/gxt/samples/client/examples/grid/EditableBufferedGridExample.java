@@ -124,7 +124,7 @@ public class EditableBufferedGridExample extends LayoutContainer {
     panel.setCollapsible(true);
     panel.setAnimCollapse(false);
     panel.setIcon(Resources.ICONS.table());
-    panel.setHeading("Editable Buffered Grid (1000 rows)");
+    panel.setHeadingHtml("Editable Buffered Grid (1000 rows)");
     panel.setLayout(new FitLayout());
     panel.add(grid);
     panel.setSize(600, 350);

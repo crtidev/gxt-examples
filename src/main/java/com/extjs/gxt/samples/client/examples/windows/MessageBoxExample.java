@@ -31,7 +31,7 @@ public class MessageBoxExample extends LayoutContainer {
     final Listener<MessageBoxEvent> l = new Listener<MessageBoxEvent>() {
       public void handleEvent(MessageBoxEvent ce) {
         Button btn = ce.getButtonClicked();
-        Info.display("MessageBox", "The '{0}' button was pressed", btn.getText());
+        Info.display("MessageBox", "The '{0}' button was pressed", btn.getHtml());
       }
     };
 
@@ -72,7 +72,7 @@ public class MessageBoxExample extends LayoutContainer {
         MessageBox box = new MessageBox();
         box.setButtons(MessageBox.YESNOCANCEL);
         box.setIcon(MessageBox.QUESTION);
-        box.setTitle("Save Changes?");
+        box.setTitleHtml("Save Changes?");
         box.addCallback(l);
         box.setMessage("You are closing a tab that has unsaved changes. Would you like to save your changes?");
         box.show();

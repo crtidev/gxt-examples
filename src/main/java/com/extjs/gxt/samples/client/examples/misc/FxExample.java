@@ -65,7 +65,7 @@ public class FxExample extends LayoutContainer {
 
     cp = new ContentPanel();
     cp.setCollapsible(true);
-    cp.setHeading("FX Demo");
+    cp.setHeadingHtml("FX Demo");
     cp.setIcon(Resources.ICONS.text());
     cp.setBodyStyleName("pad-text");
     cp.addText(TestData.DUMMY_TEXT_SHORT);

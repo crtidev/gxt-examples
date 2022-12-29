@@ -99,7 +99,7 @@ public class NavigationView extends View {
     };
 
     westPanel = (ContentPanel) Registry.get(AppView.WEST_PANEL);
-    westPanel.setHeading("Navigation");
+    westPanel.setHeadingHtml("Navigation");
     westPanel.setLayout(new FitLayout());
     westPanel.add(createTabPanel());
 

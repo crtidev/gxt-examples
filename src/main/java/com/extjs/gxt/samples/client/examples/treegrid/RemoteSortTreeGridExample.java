@@ -85,7 +85,7 @@ public class RemoteSortTreeGridExample extends LayoutContainer {
     ColumnModel cm = new ColumnModel(Arrays.asList(name, date, size));
 
     ContentPanel cp = new ContentPanel();
-    cp.setHeading("RemoteSort TreeGrid With State");
+    cp.setHeadingHtml("RemoteSort TreeGrid With State");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.setFrame(true);

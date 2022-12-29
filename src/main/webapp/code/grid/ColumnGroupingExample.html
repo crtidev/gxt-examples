@@ -112,19 +112,19 @@ public class ColumnGroupingExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(75);
     column.setRenderer(gridNumber);
@@ -148,7 +148,7 @@ public class ColumnGroupingExample extends LayoutContainer {
       column.setWidget(btn, "Last Updated");
     } else {
       column.setAlignment(HorizontalAlignment.RIGHT);
-      column.setHeader("Last Updated");
+      column.setHeaderHtml("Last Updated");
     }
 
     column.setDateTimeFormat(DateTimeFormat.getShortDateFormat());
@@ -183,7 +183,7 @@ public class ColumnGroupingExample extends LayoutContainer {
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(false);
     cp.setIcon(Resources.ICONS.table());
-    cp.setHeading(widget ? "Column Grouping with Widget" : "Column Grouping");
+    cp.setHeadingHtml(widget ? "Column Grouping with Widget" : "Column Grouping");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.setSize(600, 300);

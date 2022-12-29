@@ -141,7 +141,7 @@ public class AdvancedFormsExample extends LayoutContainer {
     FormPanel panel = new FormPanel();
     panel.setFrame(true);
     panel.setIcon(Resources.ICONS.form());
-    panel.setHeading("FormPanel");
+    panel.setHeadingHtml("FormPanel");
     panel.setSize(600, -1);
     panel.setLabelAlign(LabelAlign.TOP);
     panel.setButtonAlign(HorizontalAlignment.CENTER);

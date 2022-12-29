@@ -62,7 +62,7 @@ public class CheckBoxListViewExample extends LayoutContainer {
     panel.setCollapsible(true);
     panel.setAnimCollapse(false);
     panel.setFrame(true);
-    panel.setHeading("CheckBox ListView (0 items selected)");
+    panel.setHeadingHtml("CheckBox ListView (0 items selected)");
     panel.setWidth(300);
     panel.setAutoHeight(true);
     panel.setBodyBorder(false);
@@ -83,7 +83,7 @@ public class CheckBoxListViewExample extends LayoutContainer {
         new Listener<SelectionChangedEvent<BeanModel>>() {
 
           public void handleEvent(SelectionChangedEvent<BeanModel> be) {
-            panel.setHeading("CheckBox ListView (" + be.getSelection().size()
+            panel.setHeadingHtml("CheckBox ListView (" + be.getSelection().size()
                 + " items selected)");
           }
 

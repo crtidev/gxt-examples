@@ -72,7 +72,7 @@ public class AccordionWindowExample extends LayoutContainer {
 
     final Window complex = new Window();
     complex.setMaximizable(true);
-    complex.setHeading("Accordion Window");
+    complex.setHeadingHtml("Accordion Window");
     complex.setWidth(200);
     complex.setHeight(350);
 
@@ -97,7 +97,7 @@ public class AccordionWindowExample extends LayoutContainer {
 
     ContentPanel cp = new ContentPanel();
     cp.setAnimCollapse(false);
-    cp.setHeading("Online Users");
+    cp.setHeadingHtml("Online Users");
     cp.setLayout(new FitLayout());
     cp.getHeader().addTool(new ToolButton("x-tool-refresh"));
 
@@ -140,21 +140,21 @@ public class AccordionWindowExample extends LayoutContainer {
 
     cp = new ContentPanel();
     cp.setAnimCollapse(false);
-    cp.setHeading("Settings");
+    cp.setHeadingHtml("Settings");
     cp.setBodyStyleName("pad-text");
     cp.addText(TestData.DUMMY_TEXT_SHORT);
     complex.add(cp);
 
     cp = new ContentPanel();
     cp.setAnimCollapse(false);
-    cp.setHeading("Stuff");
+    cp.setHeadingHtml("Stuff");
     cp.setBodyStyleName("pad-text");
     cp.addText(TestData.DUMMY_TEXT_SHORT);
     complex.add(cp);
 
     cp = new ContentPanel();
     cp.setAnimCollapse(false);
-    cp.setHeading("More Stuff");
+    cp.setHeadingHtml("More Stuff");
     cp.setBodyStyleName("pad-text");
     cp.addText(TestData.DUMMY_TEXT_SHORT);
     complex.add(cp);

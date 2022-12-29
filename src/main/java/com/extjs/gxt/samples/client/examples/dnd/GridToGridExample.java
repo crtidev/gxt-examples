@@ -46,7 +46,7 @@ public class GridToGridExample extends LayoutContainer {
 
     ContentPanel cp = new ContentPanel();
     cp.setSize(600, 300);
-    cp.setHeading("Grid DND Example");
+    cp.setHeadingHtml("Grid DND Example");
     cp.setLayout(new RowLayout(Orientation.HORIZONTAL));
 
     ToolBar toolBar = new ToolBar();
@@ -112,13 +112,13 @@ public class GridToGridExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     configs.add(column);
 

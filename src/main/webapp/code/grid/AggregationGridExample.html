@@ -97,19 +97,19 @@ public class AggregationGridExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(100);
     column.setRenderer(gridNumber);
@@ -169,7 +169,7 @@ public class AggregationGridExample extends LayoutContainer {
     cp.setCollapsible(true);
     cp.setAnimCollapse(false);
     cp.setFrame(true);
-    cp.setHeading("Aggregation Rows");
+    cp.setHeadingHtml("Aggregation Rows");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.setBounds(10, 10, 600, 350);

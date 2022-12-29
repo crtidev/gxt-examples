@@ -26,7 +26,7 @@ public class ButtonAlignExample extends LayoutContainer {
 
       @Override
       public void componentSelected(ButtonEvent ce) {
-        Info.display("Click", ce.getButton().getText() + " clicked");
+        Info.display("Click", ce.getButton().getHtml() + " clicked");
 
       }
 
@@ -34,7 +34,7 @@ public class ButtonAlignExample extends LayoutContainer {
     int i = 1;
     for (HorizontalAlignment align : HorizontalAlignment.values()) {
       ContentPanel cp = new ContentPanel();
-      cp.setHeading("ButtonAligning Example: " + align.name().toLowerCase());
+      cp.setHeadingHtml("ButtonAligning Example: " + align.name().toLowerCase());
       for (int j = 0; j < 3; i++, j++) {
         cp.addButton(new Button("Button " + i, l));
       }

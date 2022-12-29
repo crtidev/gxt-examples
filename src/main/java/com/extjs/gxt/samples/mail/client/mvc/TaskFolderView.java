@@ -41,7 +41,7 @@ public class TaskFolderView extends View {
   protected void initUI() {
     tasks = new ContentPanel();
     tasks.setAnimCollapse(false);
-    tasks.setHeading("Tasks");
+    tasks.setHeadingHtml("Tasks");
     tasks.addListener(Events.Expand, new Listener<ComponentEvent>() {
       public void handleEvent(ComponentEvent be) {
         Dispatcher.get().dispatch(AppEvents.NavTasks);

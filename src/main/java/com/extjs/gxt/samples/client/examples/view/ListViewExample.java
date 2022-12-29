@@ -61,7 +61,7 @@ public class ListViewExample extends LayoutContainer {
     panel.setAnimCollapse(false);
     panel.setFrame(true);
     panel.setId("images-view");
-    panel.setHeading("Simple ListView (0 items selected)");
+    panel.setHeadingHtml("Simple ListView (0 items selected)");
     panel.setWidth(535);
     panel.setAutoHeight(true);
     panel.setBodyBorder(false);
@@ -84,7 +84,7 @@ public class ListViewExample extends LayoutContainer {
         new Listener<SelectionChangedEvent<BeanModel>>() {
 
           public void handleEvent(SelectionChangedEvent<BeanModel> be) {
-            panel.setHeading("Simple ListView (" + be.getSelection().size()
+            panel.setHeadingHtml("Simple ListView (" + be.getSelection().size()
                 + " items selected)");
           }
 

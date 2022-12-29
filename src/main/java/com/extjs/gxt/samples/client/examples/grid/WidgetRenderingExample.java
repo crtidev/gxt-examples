@@ -32,7 +32,6 @@ import com.extjs.gxt.ui.client.widget.grid.Grid;
 import com.extjs.gxt.ui.client.widget.grid.GridCellRenderer;
 import com.extjs.gxt.ui.client.widget.layout.FitLayout;
 import com.extjs.gxt.ui.client.widget.layout.FlowLayout;
-import com.extjs.gxt.ui.client.widget.table.NumberCellRenderer;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.NumberFormat;
 import com.google.gwt.user.client.Element;
@@ -78,9 +77,7 @@ public class WidgetRenderingExample extends LayoutContainer {
       }
     };
 
-    final NumberFormat currency = NumberFormat.getCurrencyFormat();
     final NumberFormat number = NumberFormat.getFormat("0.00");
-    final NumberCellRenderer<Grid<Stock>> numberRenderer = new NumberCellRenderer<Grid<Stock>>(currency);
 
     GridCellRenderer<Stock> change = new GridCellRenderer<Stock>() {
       public String render(Stock model, String property, ColumnData config, int rowIndex, int colIndex,
@@ -91,34 +88,26 @@ public class WidgetRenderingExample extends LayoutContainer {
       }
     };
 
-    GridCellRenderer<Stock> gridNumber = new GridCellRenderer<Stock>() {
-      public String render(Stock model, String property, ColumnData config, int rowIndex, int colIndex,
-          ListStore<Stock> stor, Grid<Stock> grid) {
-        return numberRenderer.render(null, property, model.get(property));
-      }
-    };
-
     List<ColumnConfig> configs = new ArrayList<ColumnConfig>();
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Company");
+    column.setHeaderHtml("Company");
     column.setWidth(200);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("symbol");
-    column.setHeader("Symbol");
+    column.setHeaderHtml("Symbol");
     column.setWidth(100);
     column.setRenderer(buttonRenderer);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("last");
-    column.setHeader("Last");
+    column.setHeaderHtml("Last");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(75);
-    column.setRenderer(gridNumber);
     configs.add(column);
 
     column = new ColumnConfig("change", "Change", 100);
@@ -139,7 +128,7 @@ public class WidgetRenderingExample extends LayoutContainer {
     ContentPanel cp = new ContentPanel();
     cp.setBodyBorder(false);
     cp.setIcon(Resources.ICONS.table());
-    cp.setHeading("Widget Renderer Grid");
+    cp.setHeadingHtml("Widget Renderer Grid");
     cp.setButtonAlign(HorizontalAlignment.CENTER);
     cp.setLayout(new FitLayout());
     cp.setSize(600, 300);

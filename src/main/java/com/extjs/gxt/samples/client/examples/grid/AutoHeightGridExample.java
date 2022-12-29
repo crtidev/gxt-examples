@@ -78,7 +78,7 @@ public class AutoHeightGridExample extends LayoutContainer {
 
     ColumnConfig column = new ColumnConfig();
     column.setId("name");
-    column.setHeader("Common Name");
+    column.setHeaderHtml("Common Name");
     column.setWidth(220);
 
     TextField<String> text = new TextField<String>();
@@ -115,14 +115,14 @@ public class AutoHeightGridExample extends LayoutContainer {
 
     column = new ColumnConfig();
     column.setId("light");
-    column.setHeader("Light");
+    column.setHeaderHtml("Light");
     column.setWidth(130);
     column.setEditor(editor);
     configs.add(column);
 
     column = new ColumnConfig();
     column.setId("price");
-    column.setHeader("Price");
+    column.setHeaderHtml("Price");
     column.setAlignment(HorizontalAlignment.RIGHT);
     column.setWidth(70);
     column.setNumberFormat(NumberFormat.getCurrencyFormat());
@@ -135,7 +135,7 @@ public class AutoHeightGridExample extends LayoutContainer {
 
     column = new ColumnConfig();
     column.setId("available");
-    column.setHeader("Available");
+    column.setHeaderHtml("Available");
     column.setWidth(95);
     column.setEditor(new CellEditor(dateField));
     column.setDateTimeFormat(DateTimeFormat.getMediumDateFormat());
@@ -151,7 +151,7 @@ public class AutoHeightGridExample extends LayoutContainer {
     ColumnModel cm = new ColumnModel(configs);
 
     cp = new ContentPanel();
-    cp.setHeading("Auto Height Edit Plants");
+    cp.setHeadingHtml("Auto Height Edit Plants");
     cp.setFrame(true);
     cp.setIcon(Resources.ICONS.table());
     cp.setWidth(600);
