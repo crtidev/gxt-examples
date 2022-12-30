@@ -65,6 +65,8 @@
   <build>
     <!-- Generate compiled stuff in the folder used for developing mode --> 
     <outputDirectory>target/www/WEB-INF/classes</outputDirectory>
+    <finalName>ROOT</finalName>
+    
     <plugins>
       
         <plugin>
