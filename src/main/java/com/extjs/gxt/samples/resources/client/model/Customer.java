@@ -9,7 +9,9 @@ package com.extjs.gxt.samples.resources.client.model;
 
 import java.io.Serializable;
 
-public class Customer implements Serializable {
+import com.extjs.gxt.ui.client.data.BeanModelTag;
+
+public class Customer implements Serializable, BeanModelTag {
 
   private String name;
   private String email;

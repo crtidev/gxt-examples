@@ -11,77 +11,76 @@
   <name>com.extjs.gxt.samples.explorer.Explorer</name>
   
   <properties>
-      <gwtVersion>2.9.0</gwtVersion>
-      <maven.compiler.source>11</maven.compiler.source>
-      <maven.compiler.target>11</maven.compiler.target>
+    <!-- Convenience property to set the GWT version -->
+    <gwt.version>2.10.0</gwt.version>
+
+    <!-- GWT 2.9 support 8, 9 and 11 -->
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  
-  <repositories>
-	<repository>
-		<id>jahia</id>
-		<url>http://maven.jahia.org/maven2/</url>
-	</repository>
-  </repositories>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.gwtproject</groupId>
+        <artifactId>gwt</artifactId>
+        <version>${gwt.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
-      <groupId>com.google.gwt</groupId>
+      <groupId>org.gwtproject</groupId>
       <artifactId>gwt-servlet</artifactId>
-      <version>${gwtVersion}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>com.google.gwt</groupId>
+      <groupId>org.gwtproject</groupId>
       <artifactId>gwt-user</artifactId>
-      <version>${gwtVersion}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.google.gwt</groupId>
+      <groupId>org.gwtproject</groupId>
       <artifactId>gwt-dev</artifactId>
-      <version>${gwtVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
-	<dependency>
-		<groupId>org.junit.jupiter</groupId>
-		<artifactId>junit-jupiter-engine</artifactId>
-		<version>5.8.2</version>
-		<scope>test</scope>
-	</dependency>
-	<dependency>
-		<groupId>org.junit.jupiter</groupId>
-		<artifactId>junit-jupiter-api</artifactId>
-		<version>5.8.2</version>
-		<scope>test</scope>
-	</dependency>
-	<dependency>
-		<groupId>org.junit.vintage</groupId>
-		<artifactId>junit-vintage-engine</artifactId>
-		<version>5.8.2</version>
-		<scope>test</scope>
-	</dependency>
 	<dependency>
 		<groupId>br.com.crti</groupId>
 		<artifactId>crti-gxt</artifactId>
 		<version>2.0.28</version>
-		<scope>provided</scope>
 	</dependency>
   </dependencies>
   
   <build>
     <!-- Generate compiled stuff in the folder used for developing mode --> 
     <outputDirectory>target/www/WEB-INF/classes</outputDirectory>
-    
     <plugins>
       
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.3.2</version>
+        </plugin>
+	  
       <!-- GWT Maven Plugin-->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
+		<version>2.10.0</version>
         <!-- JS is only needed in the package phase, this speeds up testing --> 
         <executions>
           <execution>
-            <phase>prepare-package</phase>
             <goals>
               <goal>compile</goal>
             </goals>
